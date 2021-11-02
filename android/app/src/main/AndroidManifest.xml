@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.iro">
+    <uses-permission android:name="android.permission.INTERNET" /> 
    <application
         android:label="iro"
         android:icon="@mipmap/ic_launcher">

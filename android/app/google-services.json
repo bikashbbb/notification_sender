@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "711291770712",
+    "project_id": "iro-a60e2",
+    "storage_bucket": "iro-a60e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711291770712:android:ec15f80ec9b0862469372d",
+        "android_client_info": {
+          "package_name": "com.example.iro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711291770712-rb27l4mdvcb89mb94pk0chprs9n5071v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.iro",
+            "certificate_hash": "678ca921f6b07590ef1ada68177329c6cd46010f"
+          }
+        },
+        {
+          "client_id": "711291770712-k7fmrpdoepj5vcfp0sund4o95orpndae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy0C7dN462m-gxoW5ryxhdTuxv_0rvA3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711291770712-k7fmrpdoepj5vcfp0sund4o95orpndae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

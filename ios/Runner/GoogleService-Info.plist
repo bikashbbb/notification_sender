@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>711291770712-uobc6a0omagg9adu1uoj2e21n8rn7b1s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.711291770712-uobc6a0omagg9adu1uoj2e21n8rn7b1s</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>711291770712-rb27l4mdvcb89mb94pk0chprs9n5071v.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBFsQMufUbfTZuCoaJZrJxRSuh6w_XtWkc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>711291770712</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.iro</string>
+	<key>PROJECT_ID</key>
+	<string>iro-a60e2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>iro-a60e2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:711291770712:ios:77716c81823a42af69372d</string>
+</dict>
+</plist>

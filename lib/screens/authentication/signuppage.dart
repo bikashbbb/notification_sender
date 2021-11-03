@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iro/domain/signupdomain.dart';
 import 'package:iro/palette/projectpatetrn.dart';
 import 'package:iro/palette/buttons.dart';
 import 'package:iro/provider/auth/signupprovider.dart';
+import 'package:flutter_otp/flutter_otp.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -13,7 +15,7 @@ class SignupPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Container(
           width: MediaQuery.of(context).size.width,
-          color: const Color(0xff123456),
+          color: background,
           child: GetBuilder<SIgnupClicked>(
               init: SIgnupClicked(),
               builder: (_) {
@@ -30,12 +32,29 @@ class SignupPage extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      // textfields
-                      Alltextfields.register_textfield(_.username,
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 10),
+                        child: SizedBox(
+                            width: 330,
+                            child: GetBuilder<TextfieldController>(
+                                init: TextfieldController(),
+                                builder: (builder) {
+                                  return Text(
+                                    TextfieldController.usermsginitial,
+                                    style: const TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15),
+                                  );
+                                })),
+                      ),
+                      // textfieldts
+                      Alltextfields.register_textfield(SIgnupClicked.username,
                           hinttext: 'Username here'),
-                      Alltextfields.register_textfield(_.phone,
+                      Alltextfields.register_textfield(SIgnupClicked.phone,
                           hinttext: 'Phone number', context: context),
-                      Alltextfields.register_textfield(_.password.value,
+                      Alltextfields.register_textfield(
+                          SIgnupClicked.password.value,
                           hinttext: 'Password here'),
                       Alltextfields.register_textfield(_.confirmPasword.value,
                           hinttext: 'Confirm password'),
@@ -45,7 +64,7 @@ class SignupPage extends StatelessWidget {
                         child: SizedBox(
                           width: 300,
                           child: Text(
-                            _.messege.value,
+                            SIgnupClicked.messege.value,
                             style: const TextStyle(
                                 color: Colors.red,
                                 fontSize: 15,
@@ -57,7 +76,8 @@ class SignupPage extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 185, top: 20),
                         child: InkWell(
                             onTap: () {
-                              _.signupclicked();
+                              //_.signupclicked();
+                              //Get.to(const PhoneVerify());
                             },
                             child: loginbutton(
                               'Signup',

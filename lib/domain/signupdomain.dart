@@ -1,19 +1,38 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:get/get.dart';
+import 'package:iro/provider/auth/signupprovider.dart';
+import 'package:iro/screens/authentication/phoneverify.dart';
 
-void sendOtp(phonenum) async {
-    await FirebaseAuth.instance.verifyPhoneNumber(
-      phoneNumber: '+977 9823099656',
-      verificationCompleted: (PhoneAuthCredential credential) {
-        print('verified completely');
-      },
-      verificationFailed: (FirebaseAuthException e) {
-        print(e);
-      },
-      codeSent: (String verificationId, int? resendToken) {},
-      codeAutoRetrievalTimeout: (String verificationId) {},
-    );
+var firebase = FirebaseFirestore.instance;
+var firebaseauth = FirebaseAuth.instance;
+var verificationid;
+
+sendOtp(countryCode) async {
+  
+  await FirebaseAuth.instance.verifyPhoneNumber(
+    phoneNumber: '+$countryCode' + SIgnupClicked.phone.text,
+    verificationCompleted: (PhoneAuthCredential credential) {},
+    verificationFailed: (FirebaseAuthException e) async {},
+    codeSent: (String verificationId, int? resendToken) async {
+      verificationid = verificationId;
+      Get.to(PhoneVerify());
+    },
+    codeAutoRetrievalTimeout: (String verificationId) {},
+  );
+}
+
+void createAccount() async {
+  // if user created return true else false
+}
+
+Future<bool> isusernameAvailable() async {
+  var current_user = (await firebase
+      .collection('users')
+      .where('username', isEqualTo: SIgnupClicked.username.text)
+      .get());
+  if (current_user.docs.isEmpty) {
+    return true;
   }
-
-void createAccount()async{
-  //
+  return false;
 }

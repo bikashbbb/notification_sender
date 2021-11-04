@@ -23,22 +23,24 @@ class CountryCodeController extends GetxController {
   }
 
   void isphonevalid() async {
+    isloading.value = true;
+    update();
     try {
       var result =
           await PhoneNumberUtil().validate(SIgnupClicked.phone.text, regincode);
       if (result) {
         SIgnupClicked.messege.value = '';
-        isloading.value = true;
         SignupModel.username = SIgnupClicked.username.text;
         SignupModel.password = SIgnupClicked.password.value.text;
         update();
-        var code = await sendOtp(cuntrycode);
-        print('codeeeeeeeee is $code');
+        sendOtp(cuntrycode);
       } else {
+        isloading.value = false;
         SIgnupClicked.messege.value = 'phone number invalid for the region';
         update();
       }
     } on Exception {
+      isloading.value = false;
       SIgnupClicked.messege.value = 'phone number invalid for the region';
       update();
     }

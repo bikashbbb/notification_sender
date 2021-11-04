@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:711291770712:android:ec15f80ec9b0862469372d",
+        "mobilesdk_app_id": "1:711291770712:android:a214e0a97f65adae69372d",
         "android_client_info": {
           "package_name": "com.example.iro"
         }
@@ -37,6 +37,13 @@
             {
               "client_id": "711291770712-k7fmrpdoepj5vcfp0sund4o95orpndae.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "711291770712-uobc6a0omagg9adu1uoj2e21n8rn7b1s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.iro"
+              }
             }
           ]
         }

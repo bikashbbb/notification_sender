@@ -9,11 +9,13 @@ var firebaseauth = FirebaseAuth.instance;
 var verificationid;
 
 sendOtp(countryCode) async {
-  
+  //firebaseauth.
   await FirebaseAuth.instance.verifyPhoneNumber(
     phoneNumber: '+$countryCode' + SIgnupClicked.phone.text,
     verificationCompleted: (PhoneAuthCredential credential) {},
-    verificationFailed: (FirebaseAuthException e) async {},
+    verificationFailed: (FirebaseAuthException e) async {
+      SIgnupClicked.messege.value = e.message!;
+    },
     codeSent: (String verificationId, int? resendToken) async {
       verificationid = verificationId;
       Get.to(PhoneVerify());

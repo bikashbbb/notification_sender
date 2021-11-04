@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iro/domain/signupdomain.dart';
 import 'package:iro/palette/projectpatetrn.dart';
 import 'package:iro/palette/buttons.dart';
 import 'package:iro/provider/auth/signupprovider.dart';
-import 'package:flutter_otp/flutter_otp.dart';
+import 'package:iro/screens/authentication/phoneverify.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -49,8 +48,6 @@ class SignupPage extends StatelessWidget {
                                 })),
                       ),
                       // textfieldts
-                      Alltextfields.register_textfield(SIgnupClicked.username,
-                          hinttext: 'Username here'),
                       Alltextfields.register_textfield(SIgnupClicked.phone,
                           hinttext: 'Phone number', context: context),
                       Alltextfields.register_textfield(
@@ -76,8 +73,7 @@ class SignupPage extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 185, top: 20),
                         child: InkWell(
                             onTap: () {
-                              //_.signupclicked();
-                              //Get.to(const PhoneVerify());
+                              _.signupclicked();
                             },
                             child: loginbutton(
                               'Signup',

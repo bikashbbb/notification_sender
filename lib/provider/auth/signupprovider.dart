@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iro/domain/signupdomain.dart';
 import 'package:iro/provider/auth/countrycode.dart';
-import 'package:iro/screens/authentication/signuppage.dart';
 
 class SIgnupClicked extends GetxController {
   // controllers
